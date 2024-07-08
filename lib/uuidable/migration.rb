@@ -2,8 +2,8 @@
 
 module Uuidable
   COLUMN_NAME = :uuid
-  COLUMN_TYPE = :binary
-  COLUMN_OPTIONS = { limit: 16, null: false }.freeze
+  COLUMN_TYPE = :uuid
+  COLUMN_OPTIONS = { null: false, default: "gen_random_uuid()" }.freeze
   INDEX_OPTIONS = { unique: true }.freeze
 
   # Module adds method to table definition
